@@ -53,3 +53,10 @@ like this:
     ==> ApduCommand(80CA000004DEADBEEF00)
     <== ApduResponse(48656C6C6F2046696465736D6F219000)
     >
+
+Unit Testing
+------------
+
+See example tests in `src/test/java`.
+
+	./gradlew test
