@@ -86,3 +86,20 @@ It expects your `fidesmoAppId` in environment variable `HELLO_FIDESMO_APPID`:
 	HELLO_FIDESMO_APPID=C8739B19 java HelloFidesmoTest
 
 Replace value `C8739B19` with your Fidesmo developer AppId.
+
+# IntelliJ IDEA
+
+When using IntelliJ [IDEA] as your JavaCard IDE, you will need to make the `JC_HOME` environment variable available to your IDE. 
+[IDEA]:
+https://www.jetbrains.com/idea/
+
+You can explicitely pass the environment variable when starting idea from the command line:
+
+	git clone https://github.com/fidesmo/gradle-fidesmo-example.git
+	JC_HOME=~/java_card_kit-2_2_2 idea .
+
+Alternatively, to set the environment variable on all future processes launched by launchd in the caller's context:
+
+	launchctl setenv JC_HOME ~/java_card_kit-2_2_2
+
+Then, start IDEA and select _Check out from Version Control_ using the github URL `https://github.com/fidesmo/gradle-fidesmo-example.git`
