@@ -60,3 +60,29 @@ Unit Testing
 See example tests in `src/test/java`.
 
 	./gradlew test
+
+Running on a Fidesmo Card
+-------------------------
+
+The `build` task needs environment variable `JC_HOME` to point to your JCDK:
+
+	JC_HOME=~/java_card_kit-2_2_2 ./gradlew build
+
+Install to your Fidesmo Card:
+
+	./gradlew installToLocalCard
+
+The file `HelloFidesmoTest.java` ([src]) can be used to run the applet:
+
+[src]:
+https://gist.github.com/miguelcardo/1b5ada6dc97f35ade737
+
+Compile and run:
+
+	javac HelloFidesmoTest.java 
+
+It expects your `fidesmoAppId` in environment variable `HELLO_FIDESMO_APPID`:
+
+	HELLO_FIDESMO_APPID=C8739B19 java HelloFidesmoTest
+
+Replace value `C8739B19` with your Fidesmo developer AppId.
